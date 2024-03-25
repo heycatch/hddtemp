@@ -1,4 +1,3 @@
-
 DESCRIPTION
 ===========
 hddtemp will show you the hard drive temperature if the hard drive can
@@ -13,16 +12,11 @@ Please see COPYING file.
 
 INSTALLATION
 ============
-Run ./configure (see --help for options), then just type 'make' and don't forget
-to get the last hddtemp.db file on the site :
-
 $ wget http://www.guzu.net/linux/hddtemp.db
-
-By default, the hddtemp.db will we searched in /usr/share/misc directory but
-you can change this at compilation time with the --with-db-path option:
-
-$ ./configure --with-db-path=/etc/hddtemp.db
-
+$ ./configure
+$ make
+$ sudo make install
+$ sudo hddtemp /dev/sda -f $PWD/hddtemp.db
 
 
 INFORMATION
